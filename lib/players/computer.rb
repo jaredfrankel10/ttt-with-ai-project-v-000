@@ -1,8 +1,8 @@
 require 'pry'
  module Players
    class Computer < Player
- 
- 
+
+
      def move(board)
        #select 5 unless it is taken
        #if turn count = 1 and 1 is not taken, choose 1
@@ -19,7 +19,7 @@ require 'pry'
          move = [2, 4, 6, 8].detect{|i| !board.taken?(i)}.to_s
        else
          move = Random.rand(1..9).to_s
- 
+
        end
      end
    end
