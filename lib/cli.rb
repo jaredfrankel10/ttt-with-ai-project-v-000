@@ -7,7 +7,7 @@ class CLI
      puts "- - - - - - - - - - -"
      menu
    end
- 
+
    def menu
      puts "Select from the following options"
      puts "0 player - to watch the computer play itself"
@@ -17,7 +17,7 @@ class CLI
      puts "Make your selection to begin the game."
      puts "Enter 'q' to quit."
      selection = gets.strip
- 
+
      case(selection)
      when '0'
        computer_only_game
@@ -31,18 +31,18 @@ class CLI
      else
        puts "Please select a valid otion."
        menu
- 
+
      end
    end
- 
- 
+
+
    def computer_only_game
      game = Game.new
      puts "Watch the computer play itself VERY fast"
      Game.new(Players::Computer.new('X'), Players::Computer.new('O')).play
      new_game?
    end
- 
+
    def one_player_game
      game = nil
      puts "This is exactly like any other Tic Tac Toe"
@@ -65,8 +65,8 @@ class CLI
      game.play
      new_game?
    end
- 
- 
+
+
    def two_player_game
      game = nil
      puts "This is exactly like any other Tic Tac Toe."
@@ -80,8 +80,8 @@ class CLI
      game.play
      new_game?
    end
- 
- 
+
+
    def new_game?
      puts "Do you want to start a new game?"
      puts "Enter 'y' or 'n'"
